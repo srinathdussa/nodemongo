@@ -5,13 +5,13 @@ const bodyparser = require('body-parser');
 var dbReference = require('./modules/dbWrapper')
 var dbWrapper = dbReference({});
 
-console.log('sample hI');
+console.log('sample hI1');
 
 app.use(bodyparser.urlencoded({ extended: true }))
 
 app.get('/', function (req, res) {
     //res.send('Hello');
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/Home.html');
 });
 
 app.post('/quotes', (req, res) => {
